@@ -1,6 +1,6 @@
 <h1>Rectangle_Mato v1.0.0</h1>
 <img src="https://github.com/mato-cica/Rectangle_Mato/releases/download/v1.0/Rectangle_Mato_v10.jpg
-" alt="Rect-jpg" style="float:right;">
+" alt="v1.0.0 structure" style="float:right;">
 is a small C++ console program which creates a rectangle builded of '+' sign.<br/>
 After starting user should enter dimensions and coordinates of upper left angle of rectangle. That means four pieces<br/> 
 of data: lengths, width, coordinates x and y. All of them are validated, so you can't enter anything but number without<br/>
@@ -12,5 +12,9 @@ coordinate is limited just to avoid the scrolling. There is no way to enter a wr
 always be warned and get opportunity to try again until you enter correct data. <br/>
 <h2>Structure of program</h2>
 Templated class 'EnterDimension.h' is base of chain of inheriting. Templated class 'EnterPosition.h' is derived from<br/>
-base. The class 'ShowRectangle.h' is derived from 'EnterPosition.h' class, as shows figure v1.0.0 structure.
+base. The class 'ShowRectangle.h' is derived from 'EnterPosition.h' class, as shown in figure 'v1.0.0 structure'.<br/>
+Templated classe 'Mato_valid.h' has validating function. The class is called by 'EnterDimension.h' and <br/>
+'EnterPosition.h'. <br/>
+All the classes are defined in header files because .cpp files don't work with templated and inherited classes when<br/>
+using GNU GCC compiler (g++).
 
